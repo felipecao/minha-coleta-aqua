@@ -55,7 +55,8 @@
     "slug": "0.9.x",
     "uuid": "3.x.x",
     "vision": "4.x.x",
-    "visionary": "6.x.x"
+    "visionary": "6.x.x",
+    "webpack": "2.x.x"
   },
   "devDependencies": {
     "babel-core": "6.x.x",
@@ -81,7 +82,6 @@
     "qs": "6.x.x",
     "react-dom": "15.x.x",
     "react-router-dom": "4.x.x",
-    "webpack": "2.x.x",
     "xhr": "2.x.x"
   }
 }
