@@ -2,11 +2,9 @@
 const Confidence = require('confidence');
 const Config = require('./config.js');
 
-
 const criteria = {
     env: process.env.NODE_ENV
 };
-
 
 const manifest = {
     $meta: 'This file defines the plot device.',
@@ -72,7 +70,8 @@ const manifest = {
                         AuthAttempt: './server/models/auth-attempt',
                         Session: './server/models/session',
                         Status: './server/models/status',
-                        User: './server/models/user'
+                        User: './server/models/user',
+                        City: './server/models/city'
                     },
                     autoIndex: Config.get('/hapiMongoModels/autoIndex')
                 }
@@ -152,6 +151,12 @@ const manifest = {
         },
         {
             plugin: './server/api/users',
+            options: {
+                routes: { prefix: '/api' }
+            }
+        },
+        {
+            plugin: './server/api/cities',
             options: {
                 routes: { prefix: '/api' }
             }

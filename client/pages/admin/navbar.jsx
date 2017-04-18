@@ -3,8 +3,6 @@ const PropTypes = require('prop-types');
 const React = require('react');
 const ReactRouter = require('react-router-dom');
 const ClassNames = require('classnames');
-
-
 const Link = ReactRouter.Link;
 const propTypes = {
     location: PropTypes.object
@@ -81,6 +79,9 @@ class Navbar extends React.Component {
                             </li>
                             <li className={this.classForPath(/^\/admin\/users/)}>
                                 <Link to="/admin/users">Users</Link>
+                            </li>
+                            <li className={this.classForPath(/^\/admin\/cities/)}>
+                                <Link to="/admin/cities">Cities</Link>
                             </li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">

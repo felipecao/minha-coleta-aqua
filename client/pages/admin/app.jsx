@@ -15,12 +15,12 @@ const StatusDetails = require('./statuses/details/index.jsx');
 const StatusSearch = require('./statuses/search/index.jsx');
 const UserDetails = require('./users/details/index.jsx');
 const UserSearch = require('./users/search/index.jsx');
-
+const CityDetails = require('./cities/details/index.jsx');
+const CitySearch = require('./cities/search/index.jsx');
 
 const Router = ReactRouter.BrowserRouter;
 const Route = ReactRouter.Route;
 const Switch = ReactRouter.Switch;
-
 
 const App = (
     <Router>
@@ -38,6 +38,8 @@ const App = (
                 <Route path="/admin/statuses/:id" component={StatusDetails} />
                 <Route exact path="/admin/users" component={UserSearch} />
                 <Route path="/admin/users/:id" component={UserDetails} />
+                <Route exact path="/admin/cities" component={CitySearch} />
+                <Route path="/admin/cities/:id" component={CityDetails} />
                 <Route component={NotFound} />
             </Switch>
             <Footer />
