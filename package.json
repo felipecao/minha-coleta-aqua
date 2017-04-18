@@ -67,7 +67,7 @@
     "eslint-plugin-react": "6.x.x",
     "flux": "3.x.x",
     "flux-constant": "1.x.x",
-    "font-awesome": "4.x.x"
+    "font-awesome": "4.x.x",
     "jsdom": "9.x.x",
     "lab": "13.x.x",
     "lodash": "4.x.x",
