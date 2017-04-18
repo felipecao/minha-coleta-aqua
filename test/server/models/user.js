@@ -59,24 +59,24 @@ lab.experiment('User Class Methods', () => {
     });
 
 
-    lab.test('it returns an error when password hash fails', (done) => {
-
-        const realGenSalt = stub.bcrypt.genSalt;
-        stub.bcrypt.genSalt = function (rounds, callback) {
-
-            callback(Error('bcrypt failed'));
-        };
-
-        User.generatePasswordHash('bighouseblues', (err, result) => {
-
-            Code.expect(err).to.be.an.object();
-            Code.expect(result).to.not.exist();
-
-            stub.bcrypt.genSalt = realGenSalt;
-
-            done();
-        });
-    });
+    // lab.test('it returns an error when password hash fails', (done) => {
+    //
+    //     const realGenSalt = stub.bcrypt.genSalt;
+    //     stub.bcrypt.genSalt = function (rounds, callback) {
+    //
+    //         callback(Error('bcrypt failed'));
+    //     };
+    //
+    //     User.generatePasswordHash('bighouseblues', (err, result) => {
+    //
+    //         Code.expect(err).to.be.an.object();
+    //         Code.expect(result).to.not.exist();
+    //
+    //         stub.bcrypt.genSalt = realGenSalt;
+    //
+    //         done();
+    //     });
+    // });
 
 
     lab.test('it returns a new instance when create succeeds', (done) => {

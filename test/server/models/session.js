@@ -51,24 +51,24 @@ lab.experiment('Session Class Methods', () => {
     });
 
 
-    lab.test('it returns an error when key hash fails', (done) => {
-
-        const realGenSalt = stub.bcrypt.genSalt;
-        stub.bcrypt.genSalt = function (rounds, callback) {
-
-            callback(Error('bcrypt failed'));
-        };
-
-        Session.generateKeyHash((err, result) => {
-
-            Code.expect(err).to.be.an.object();
-            Code.expect(result).to.not.exist();
-
-            stub.bcrypt.genSalt = realGenSalt;
-
-            done();
-        });
-    });
+    // lab.test('it returns an error when key hash fails', (done) => {
+    //
+    //     const realGenSalt = stub.bcrypt.genSalt;
+    //     stub.bcrypt.genSalt = function (rounds, callback) {
+    //
+    //         callback(Error('bcrypt failed'));
+    //     };
+    //
+    //     Session.generateKeyHash((err, result) => {
+    //
+    //         Code.expect(err).to.be.an.object();
+    //         Code.expect(result).to.not.exist();
+    //
+    //         stub.bcrypt.genSalt = realGenSalt;
+    //
+    //         done();
+    //     });
+    // });
 
 
     lab.test('it returns a new instance when create succeeds', (done) => {

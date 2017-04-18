@@ -42,7 +42,7 @@ const config = {
                 $filter: 'env',
                 production: process.env.MONGODB_URI,
                 test: 'mongodb://localhost:27017/aqua-test',
-                $default: 'mongodb://localhost:27017/aqua'
+                $default: process.env.MONGODB_URI
             }
         },
         autoIndex: true
